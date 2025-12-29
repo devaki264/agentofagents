@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 from PIL import Image
 
-import os
+
 load_dotenv()
 genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 model = genai.GenerativeModel('gemini-2.0-flash-exp')
@@ -24,3 +24,4 @@ for frame_num in [58, 59, 60, 61]:
     print(f"{'='*60}")
 
     print(result.text)
+
